@@ -9,11 +9,13 @@ export const Appbar = () => {
     <Box sx={styles.appbar}>
       <Box sx={styles.container}>
         <Box sx={styles.logo}>
-          <img
-            src="/src/assets/logo.svg"
-            alt="Healthy Logo"
-            style={{ height: "40px", width: "auto" }}
-          />
+          <Box sx={styles.logoImage}>
+            <img
+              src="/src/assets/logo.svg"
+              alt="Healthy Logo"
+              style={{ height: "100%", width: "100%" }}
+            />
+          </Box>
         </Box>
         <Box sx={styles.navItems}>
           <Box sx={styles.navItemActive}>

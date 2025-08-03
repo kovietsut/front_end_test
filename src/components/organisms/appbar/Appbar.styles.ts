@@ -3,7 +3,7 @@ import type { TStyle } from "@/interfaces/common/styles";
 const useStyle = (): TStyle => {
   return {
     appbar: {
-      backgroundColor: "#2c2c2c",
+      backgroundColor: "#414141",
       padding: "12px 16px",
       width: "100%",
       position: "fixed",
@@ -24,6 +24,10 @@ const useStyle = (): TStyle => {
       flexDirection: "column",
       alignItems: "flex-start",
       cursor: "pointer",
+    },
+    logoImage: {
+      height: "40px",
+      width: "auto",
     },
     logoText: {
       color: "#ff6b35",
@@ -61,9 +65,6 @@ const useStyle = (): TStyle => {
       padding: "8px 12px",
       borderRadius: "8px",
       transition: "background-color 0.2s ease-in-out",
-      "&:hover": {
-        backgroundColor: "rgba(255, 107, 53, 0.1)",
-      },
     },
     navItemActive: {
       display: "flex",
@@ -72,7 +73,6 @@ const useStyle = (): TStyle => {
       cursor: "pointer",
       padding: "8px 12px",
       borderRadius: "8px",
-      backgroundColor: "rgba(255, 107, 53, 0.1)",
     },
     navText: {
       color: "#ffffff",
@@ -80,12 +80,12 @@ const useStyle = (): TStyle => {
       fontWeight: 500,
     },
     navTextActive: {
-      color: "#ff6b35",
+      color: "#ff963c",
       fontSize: "14px",
       fontWeight: 500,
     },
     icon: {
-      color: "#ff6b35",
+      color: "#ff963c",
       fontSize: "20px",
     },
     notificationBadge: {
@@ -95,7 +95,7 @@ const useStyle = (): TStyle => {
       position: "absolute",
       top: "-4px",
       right: "-4px",
-      backgroundColor: "#ff6b35",
+      backgroundColor: "#ff963c",
       color: "#ffffff",
       borderRadius: "50%",
       width: "16px",
@@ -114,9 +114,6 @@ const useStyle = (): TStyle => {
       padding: "8px",
       borderRadius: "4px",
       transition: "background-color 0.2s ease-in-out",
-      "&:hover": {
-        backgroundColor: "rgba(255, 107, 53, 0.1)",
-      },
     },
     hamburgerLine: {
       width: "20px",

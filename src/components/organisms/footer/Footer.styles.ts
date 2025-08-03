@@ -3,7 +3,7 @@ import type { TStyle } from "@/interfaces/common/styles";
 const useStyle = (): TStyle => {
   return {
     footer: {
-      backgroundColor: "#2c2c2c",
+      backgroundColor: "#414141",
       padding: "12px 0px",
       width: "100%",
       position: "fixed",
