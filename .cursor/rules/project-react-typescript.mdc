@@ -1,41 +1,13 @@
-## 🏥 HealthApp - Frontend Implementation
-
-This is a frontend implementation for the **HealthApp** based on the design specifications and requirements outlined in the technical assignment. The application simulates a health-tracking interface, built using **React 19** and **Vite**.
-
 ---
-
-## 🖌️ Design Resource
-
-- **Figma**:  
-  [🔗 HealthApp Design File](https://www.figma.com/file/7qqT3dvv5OagaRlUFK01vB/HealthApp_1203)
-
-## 📁 Project Structure
-
-src/
-├── assets/ # Static assets
-├── components/ # Reusable UI components
-├── pages/ # TopPage, MyRecord, ColumnPage
-├── routes/ # Routing configuration
-├── services/ # API calls (genre.ts, comic.ts, etc.)
-├── hooks/ # Custom hooks (useFetch, usePost, etc.)
-├── stores/ # Zustand store (if used)
-├── utils/ # Utility functions
-├── App.tsx
-└── main.tsx
-
-## Run Source Code
-
-🧪 Run Locally
-
-```
-npm run dev
-```
-
-🔧 Build for Production
-
-```
-npm run build
-```
+description: |
+  Enforce a modular and scalable component structure using Atomic Design principles.
+  Each component must follow strict folder and file organization. TailwindCSS must be used for styling.
+  Subcomponents must be grouped semantically, and code must separate UI from logic.
+globs:
+  - "**/*.tsx"
+  - "**/*.ts"
+alwaysApply: false
+---
 
 ## 📁 Component Folder Structure Convention
 
@@ -134,16 +106,3 @@ export const useCreateGenre = () =>
     onSuccess: () => toast.success("Genre created"),
   });
 ```
-
-## Commit Message Convention
-
-We follow the conventional commit format to make it easy to understand the purpose of each commit. Below are the commonly used commit types:
-
-- **feat**: Adds a new feature to the system.
-- **fix**: Fixes a bug or patches an issue in the codebase.
-- **refactor**: Refactors the code (no functional changes, may also fix bugs by improving the code structure).
-- **docs**: Adds or modifies documentation.
-- **chore**: Minor changes that don’t involve code functionality (e.g., updates to the build process, project configurations, etc.).
-- **style**: Changes that do not affect the meaning of the code (e.g., formatting, CSS/UI).
-- **perf**: Code improvements that enhance performance.
-- **vendor**: Updates versions of dependencies or packages.
