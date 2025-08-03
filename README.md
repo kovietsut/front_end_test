@@ -20,6 +20,7 @@ src/
 ├── hooks/ # Custom hooks (useFetch, usePost, etc.)
 ├── stores/ # Zustand store (if used)
 ├── utils/ # Utility functions
+├── interfaces/ # Common and Specific Interfaces
 ├── App.tsx
 └── main.tsx
 
