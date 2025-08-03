@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Iconify from "@/components/atoms/Iconify";
 import useStyle from "./Appbar.styles";
+import SVGIconify from "@/components/atoms/SvgIconify";
 
 export const Appbar = () => {
   const styles = useStyle();
@@ -10,11 +11,7 @@ export const Appbar = () => {
       <Box sx={styles.container}>
         <Box sx={styles.logo}>
           <Box sx={styles.logoImage}>
-            <img
-              src="/src/assets/logo.svg"
-              alt="Healthy Logo"
-              style={{ height: "100%", width: "100%" }}
-            />
+            <SVGIconify name="IconLogo" />
           </Box>
         </Box>
         <Box sx={styles.navItems}>

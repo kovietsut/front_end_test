@@ -4,7 +4,7 @@ const useStyle = (): TStyle => {
   return {
     container: {
       position: "relative",
-      height: "312px",
+      height: "316px",
       overflow: "hidden",
     },
     backgroundRectangle: {

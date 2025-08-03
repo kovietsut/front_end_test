@@ -21,8 +21,17 @@ src/
 ├── stores/ # Zustand store (if used)
 ├── utils/ # Utility functions
 ├── interfaces/ # Common and Specific Interfaces
+├── helpers/ # Helper functions and utilities (icons, etc.)
 ├── App.tsx
 └── main.tsx
+
+### 📂 Helpers Directory
+
+The `helpers/` directory contains utility functions and shared resources that support the application:
+
+- **`icons.tsx`** - Contains SVG icon definitions and icon-related utilities
+  - `svgSources` - Object containing React SVG elements for custom icons
+  - Used by components that need custom SVG icons (e.g., knife icon for meal tracking)
 
 ## Run Source Code
 
