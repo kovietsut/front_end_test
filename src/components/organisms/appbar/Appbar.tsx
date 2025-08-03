@@ -9,8 +9,11 @@ export const Appbar = () => {
     <Box sx={styles.appbar}>
       <Box sx={styles.container}>
         <Box sx={styles.logo}>
-          <Typography sx={styles.logoText}>Healthy</Typography>
-          <Box sx={styles.logoUnderline} />
+          <img
+            src="/src/assets/logo.svg"
+            alt="Healthy Logo"
+            style={{ height: "40px", width: "auto" }}
+          />
         </Box>
         <Box sx={styles.navItems}>
           <Box sx={styles.navItemActive}>
