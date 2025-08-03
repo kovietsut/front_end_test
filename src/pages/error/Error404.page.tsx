@@ -1,50 +1,93 @@
-import { Box, Button, Typography, Stack } from "@mui/material";
+import { Box, Button, Typography, Grid, Container } from "@mui/material";
 import useStyle from "./Error.styles";
+import useResponsive from "@/hooks/useResponsive";
 
-const Error404Page: React.FC = () => {
+const Error404Page = () => {
   const styles = useStyle();
+  const isMobile = useResponsive("down", "sm");
+  const isTablet = useResponsive("between", "sm", "md");
+
   return (
     <Box sx={styles.errorContainer}>
-      <Box sx={styles.errorContentBox}>
-        <Typography variant="h1" sx={styles.errorCode}>
-          404
-        </Typography>
-        <Typography variant="h2" sx={styles.errorHeading}>
-          ページが見つかりません
-        </Typography>
-        <Typography sx={styles.errorDescription}>
-          お探しのページは存在しないか、移動された可能性があります。
-          <br />
-          URLをご確認いただくか、以下のリンクからお進みください。
-        </Typography>
-        <Button href="/" variant="contained" sx={styles.primaryButton}>
-          ホームページへ
-        </Button>
-        <Typography sx={styles.detailsButtonContainer}>
-          <Button sx={styles.detailsButton}>詳細情報を表示</Button>
-        </Typography>
-        <Stack
-          direction="row"
-          spacing={2}
+      <Container maxWidth="lg" sx={styles.errorContentBox}>
+        <Grid
+          container
+          spacing={isMobile ? 2 : 3}
           justifyContent="center"
-          sx={styles.navigationStack}
+          alignItems="center"
+          direction="column"
         >
-          <Button
-            onClick={() => window.history.back()}
-            variant="outlined"
-            sx={styles.navigationButton}
-          >
-            前のページに戻る
-          </Button>
-          <Button
-            href="/auth/login"
-            variant="outlined"
-            sx={styles.navigationButton}
-          >
-            ログインページ
-          </Button>
-        </Stack>
-      </Box>
+          <Grid size={{ xs: 12, sm: 10, md: 8, lg: 6 }}>
+            <Typography
+              variant={isMobile ? "h2" : "h1"}
+              sx={{
+                ...styles.errorCode,
+                fontSize: isMobile ? "3rem" : isTablet ? "3.5rem" : "4rem",
+                marginBottom: isMobile ? "0.5rem" : "1rem",
+              }}
+            >
+              404
+            </Typography>
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 10, md: 8, lg: 6 }}>
+            <Typography
+              variant={isMobile ? "h3" : "h2"}
+              sx={{
+                ...styles.errorHeading,
+                fontSize: isMobile ? "1.2rem" : isTablet ? "1.3rem" : "1.5rem",
+                marginBottom: isMobile ? "0.5rem" : "1rem",
+              }}
+            >
+              ページが見つかりません
+            </Typography>
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 10, md: 8, lg: 6 }}>
+            <Typography
+              sx={{
+                ...styles.errorDescription,
+                fontSize: isMobile ? "0.9rem" : "1rem",
+                marginBottom: isMobile ? "1.5rem" : "2rem",
+                padding: isMobile ? "0 10px" : "0",
+              }}
+            >
+              お探しのページは存在しないか、移動された可能性があります。
+              {!isMobile && <br />}
+              URLをご確認いただくか、以下のリンクからお進みください。
+            </Typography>
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 10, md: 8, lg: 6 }}>
+            <Button
+              href="/"
+              variant="contained"
+              sx={{
+                ...styles.primaryButton,
+                fontSize: isMobile ? "1rem" : "1.1rem",
+                padding: isMobile ? "10px 24px" : "12px 32px",
+                width: isMobile ? "100%" : "auto",
+                minWidth: isMobile ? "200px" : "auto",
+              }}
+            >
+              ホームページへ
+            </Button>
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 10, md: 8, lg: 6 }}>
+            <Box sx={styles.detailsButtonContainer}>
+              <Button
+                sx={{
+                  ...styles.detailsButton,
+                  fontSize: isMobile ? "0.8rem" : "0.9rem",
+                }}
+              >
+                詳細情報を表示
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
     </Box>
   );
 };

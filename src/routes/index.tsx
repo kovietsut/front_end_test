@@ -5,9 +5,9 @@ import AuthLayout from "@/components/templates/AuthLayout";
 import AuthGuard from "@/routes/guards/AuthGuard";
 import Login from "@/pages/login";
 import MainLayout from "@/components/templates/MainLayou";
-import Error401Page from "@/pages/error/Error401.page";
 import Error404Page from "@/pages/error/Error404.page";
 import TopPage from "@/pages/top";
+import Error401Page from "@/pages/error/Error401.page";
 
 function Routes() {
   return useRoutes([
