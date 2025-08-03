@@ -157,6 +157,10 @@ This project uses the following key dependencies and libraries:
 - **Zustand** - Lightweight state management
 - **Axios** - HTTP client for API calls
 
+### Data Visualization
+
+- **Recharts** - Composable charting library built on React components
+
 ### Routing
 
 - **React Router DOM** - Client-side routing

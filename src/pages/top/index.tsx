@@ -1,12 +1,3 @@
-import React from "react";
+import MyTop from "./MyTop";
 
-const TopPage: React.FC = () => {
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Welcome to the Top Page</h1>
-      <p>This is your main application page.</p>
-    </div>
-  );
-};
-
-export default TopPage;
+export default MyTop;
