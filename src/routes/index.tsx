@@ -1,10 +1,10 @@
 import { BrowserRouter, Navigate, useRoutes } from "react-router-dom";
 import { PATH } from "@/routes/path";
 import GuestGuard from "@/routes/guards/GuestGuard";
-import AuthLayout from "@/components/templates/AuthLayout";
+import AuthLayout from "@/components/templates/auth_layout/AuthLayout";
 import AuthGuard from "@/routes/guards/AuthGuard";
 import Login from "@/pages/login";
-import MainLayout from "@/components/templates/MainLayou";
+import MainLayout from "@/components/templates/main_layout/MainLayout";
 import Error404Page from "@/pages/error/Error404.page";
 import TopPage from "@/pages/top";
 import Error401Page from "@/pages/error/Error401.page";

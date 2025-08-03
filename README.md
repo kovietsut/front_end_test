@@ -136,6 +136,38 @@ export const useCreateGenre = () =>
   });
 ```
 
+## 📚 Dependencies & Libraries
+
+This project uses the following key dependencies and libraries:
+
+### Core Framework
+
+- **React 19** - Main UI framework
+- **Vite** - Build tool and development server
+- **TypeScript** - Type safety and development experience
+
+### UI & Styling
+
+- **Material-UI (MUI)** - Component library and design system
+- **@emotion/react & @emotion/styled** - CSS-in-JS styling solution
+- **Iconify** - Icon library providing access to 100,000+ open source icons
+
+### State Management & Data Fetching
+
+- **Zustand** - Lightweight state management
+- **Axios** - HTTP client for API calls
+
+### Routing
+
+- **React Router DOM** - Client-side routing
+
+### Development Tools
+
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific linting rules
+
+---
+
 ## Commit Message Convention
 
 We follow the conventional commit format to make it easy to understand the purpose of each commit. Below are the commonly used commit types:
