@@ -4,7 +4,20 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "msw",
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url === "/mockServiceWorker.js") {
+            res.setHeader("Content-Type", "application/javascript");
+          }
+          next();
+        });
+      },
+    },
+  ],
   server: {
     open: true,
     port: 3000,
