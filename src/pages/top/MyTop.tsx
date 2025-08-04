@@ -6,6 +6,7 @@ import SVGIconify from "@/components/atoms/SvgIconify";
 import MainPhoto from "./main_photo/MainPhoto";
 import useStyle from "./MyTop.styles";
 import Schedule from "./schedule/Schedule";
+import FilterButton from "./filter_button/FilterButton";
 
 const MyTop = () => {
   const styles = useStyle();
@@ -42,6 +43,9 @@ const MyTop = () => {
         <Schedule imageUrl="/src/assets/d01.svg" time="05.20.Lunch" />
         <Schedule imageUrl="/src/assets/m01.svg" time="05.20.Dinner" />
         <Schedule imageUrl="/src/assets/s01.svg" time="05.21.Snack" />
+      </Grid>
+      <Grid container size={12} sx={styles.filterButtonContainer} spacing={3}>
+        <FilterButton />
       </Grid>
     </>
   );
